@@ -18,10 +18,7 @@ para descargar el proyecto y comenzar a modificarlo y ver como funciona Astro, s
 ### para correr el programa
 5.- pnpm run dev
 
-![Captura desde 2024-07-13 15-02-16](https://github.com/user-attachments/assets/404f811a-629d-4037-bdc3-54c6c9e7c02c)
-
-...y esta es mi última modificación
-
+vista de Informe de accesibilidad de Google.
 ![Captura desde 2024-07-16 16-27-32](https://github.com/user-attachments/assets/220b14e2-2d42-4f5e-9291-75304cb839e3)
 
 Gracias por vistar mi repositorio.
