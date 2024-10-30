@@ -11,9 +11,9 @@ const { title, date, description, link, repo } = Astro.props;
 ---
 
 <div class="w-full flex flex-col gap-y-4 items-start">
-    <div class="text-base text-[var(--title)">{date}</div>
+    <div class="text-base">{date}</div>
 
-    <h3 class="text-lg font-semibold text-[var(--subtitle)]">{title}</h3>
+    <h3 class="text-lg font-semibold text-yellow-200/70">{title}</h3>
 
     <div class="opacity-70 text-base text-[var(--description)">
         {description}
@@ -21,7 +21,7 @@ const { title, date, description, link, repo } = Astro.props;
     {
         link && (
             <>
-                <div class="text-left text-base text-[var(--description) flex flex-col items-start gap-y-1 my-2">
+                <div class="text-left text-base flex flex-col items-start gap-y-1 my-2">
                     Links:
                     <a
                         class="hover:text-[var(--hover)] opacity-70"
