@@ -1,13 +1,70 @@
 ---
 import Section from "./Section.astro";
-
-import Css from "./icons/Css.astro";
-import Html from "./icons/Html.astro";
-import JQuery from "./icons/JQuery.astro";
-import React from "./icons/React.astro";
 import CodeIcon from "./icons/CodeIcon.astro";
-import JavaScript from "./icons/Javascript.astro";
-import AstroComponent from "./icons/AstroComponent.astro";
+import SkillItem from "./SkillItem.astro";
+
+const skills = [
+  {
+    name: "HTML",
+    url: "./assets/html.png"
+  },
+  {
+    name: "CSS",
+    url: "./assets/css.png"
+  },
+  {
+    name: "JAVASCRIPT",
+    url: "./assets/javascript.png"
+  },
+  {
+    name: "JQUERY",
+    url: "./assets/jquery.png"
+  },
+  {
+    name: "REACTJS",
+    url: "./assets/react.png"
+  },
+  {
+    name: "ASTRO",
+    url: "./assets/astro.png"
+  },
+  {
+    name: "TAILWIND",
+    url: "./assets/tailwind.png"
+  },
+  {
+    name: "BOOTSTRAP",
+    url: "./assets/bootstrap.png"
+  },
+  {
+    name: "JSON",
+    url: "./assets/json.png"
+  },
+  {
+    name: "PHP",
+    url: "./assets/php.png"
+  },
+  {
+    name: "MYSQL",
+    url: "./assets/mysql.png"
+  },
+  {
+    name: "MARIADB",
+    url: "./assets/marIadb.png"
+  },
+  {
+    name: "SQLITE",
+    url: "./assets/sqlite.png"
+  },
+  {
+    name: "GIT",
+    url: "./assets/git.png"
+  },
+  {
+    name: "GITHUB",
+    url: "./assets/github.png"
+  },
+];
 ---
 
 <Section id="skills">
@@ -16,92 +73,16 @@ import AstroComponent from "./icons/AstroComponent.astro";
     Mis Skills son:
   </h2>
   <article
-    class="flex flex-col text-center text-gray-600 max-w-[650px] mx-auto mt-7"
+    class="flex flex-col text-center text-gray-600 max-w-[700px] mx-auto mt-7"
   >
     <ol
-      class="font-bold grid grid-cols-2 md:grid-cols-3 gap-x-10 md:gap-x-10 gap-y-6 text-center mb-5"
+      class="font-bold grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-6 text-center mb-5"
     >
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm text-black bg-white"
-      >
-        <Html class="size-4" />
-        HTML
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm text-black bg-white"
-      >
-        <Css class="size-4" />
-        CSS
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-3 py-1 border-zinc-400 rounded-full text-sm text-black bg-white"
-      >
-        <JavaScript class="size-4"/>
-        JAVASCRIPT
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm text-black bg-white"
-      >
-        <JQuery class="size-4" />
-        JQUERY
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm text-black bg-white"
-      >
-        <React class="size-4" />
-        REACTJS
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm text-black bg-white"
-      >
-        <AstroComponent class="size-4" />
-        ASTRO
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        TAILWIND
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        BOOTSTRAP
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        JSON
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        PHP
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        MYSQL
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        MARIADB
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        SQLITE
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        GIT
-      </li>
-      <li
-        class="w-[150px] flex items-center justify-center gap-x-2 border-2 px-4 py-1 border-zinc-400 rounded-full text-sm"
-      >
-        GITHUB
-      </li>
+      {
+        skills.map((skill) => (
+            <SkillItem name={skill.name} url={skill.url} />
+        ))
+      }
     </ol>
   </article>
 </Section>
