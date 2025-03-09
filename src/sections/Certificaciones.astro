@@ -1,0 +1,189 @@
+---
+import StudyIcon from "../components/StudyIcon.astro";
+import Section from "../components/Section.astro";
+
+import { Image } from "astro:assets";
+
+import certificado1 from "../img-certificados/platzi/curso_de_programacion_basica.png";
+import certificado2 from "../img-certificados/platzi/curso_basico_de_c_sharp_fundamentos_variables_y_operadores.png";
+import certificado3 from "../img-certificados/platzi/curso_basico_de_javascript.png";
+import certificado4 from "../img-certificados/platzi/curso_de_frontend_developer.png";
+import certificado5 from "../img-certificados/platzi/curso_practico_de_frontend_developer.png";
+import certificado6 from "../img-certificados/platzi/curso_practico_html_css.png";
+import certificado7 from "../img-certificados/platzi/Curso_de_punto_net.png";
+import certificado8 from "../img-certificados/platzi/curso_html_css_definitivo-min.png";
+import certificado9 from "../img-certificados/platzi/curso_de_introduccion_al_desarrollo_backend.png";
+import certificado10 from "../img-certificados/platzi/curso_npm_gestion_de_paquetes_y_dependencias_en_javascript.png";
+import certificado11 from "../img-certificados/platzi/curso_pensamiento_logico_lenguajes_de_programacion.png";
+import certificado12 from "../img-certificados/platzi/curso_php_instalacion_fundamentos_y_operaciones_basico.png";
+import certificado13 from "../img-certificados/platzi/curso_practico_php.png";
+import certificado14 from "../img-certificados/platzi/curso_de_integracion_de_php_con_html.png";
+import certificado15 from "../img-certificados/platzi/curso_de_prework_configuracion_de_entorno_de_desarrollo_en_linux.png";
+import certificado16 from "../img-certificados/platzi/curso_de_prework_configuracion_de_entorno_de_desarrollo_en_windows.png";
+import certificado17 from "../img-certificados/jovenesprogramadores/curso_javascript_nivel1.png";
+import certificado18 from "../img-certificados/jovenesprogramadores/curso_javascript_nivel2.png";
+import certificado19 from "../img-certificados/jovenesprogramadores/curso_php_jovenes_programadores.png";
+import certificado20 from "../img-certificados/jovenesprogramadores/curso_css_jovenesprogramadores.png";
+import certificado21 from "../img-certificados/jovenesprogramadores/curso-introduccion-a-python.png";
+import certificado22 from "../img-certificados/jovenesprogramadores/curso-de-react.png";
+
+const cursos = [
+    {
+        id: 1,
+        name: "Curso Programación Basica",
+        image: certificado1,
+    },
+    {
+        id: 2,
+        name: "Curso Básico de C#, Fundamentos Variables y Operadores",
+        image: certificado2,
+    },
+    {
+        id: 3,
+        name: "Curso Básico de JavaScript",
+        image: certificado3,
+    },
+
+    {
+        id: 4,
+        name: "curso de frontend developer",
+        image: certificado4,
+    },
+    {
+        id: 5,
+        name: "curso practico de frontend developer",
+        image: certificado5,
+    },
+    {
+        id: 6,
+        name: "curso html y css practico",
+        image: certificado6,
+    },
+    {
+        id: 7,
+        name: "curso de fundamentos de punto net",
+        image: certificado7,
+    },
+    {
+        id: 8,
+        name: "curso definitivo html y css",
+        image: certificado8,
+    },
+
+    {
+        id: 9,
+        name: "curso introduccion al desarrollo backend",
+        image: certificado9,
+    },
+    {
+        id: 10,
+        name: "curso npm gestion de paquetes y dependencias en javascript",
+        image: certificado10,
+    },
+    {
+        id: 11,
+        name: "curso pensamiento logico de lenguajes de programación",
+        image: certificado11,
+    },
+    {
+        id: 12,
+        name: "curso de php instalacion fundamentos y operaciones basico",
+        image: certificado12,
+    },
+    {
+        id: 13,
+        name: "curso practico de php",
+        image: certificado13,
+    },
+    {
+        id: 14,
+        name: "curso integracion de php y html",
+        image: certificado14,
+    },
+
+    {
+        id: 15,
+        name: "curso prework linux: Configuracion de entorno de desarrollo en linux",
+        image: certificado15,
+    },
+    {
+        id: 16,
+        name: "curso prework: configuracion de entorno de desarrollo en windows",
+        image: certificado16,
+    },
+    {
+        id: 17,
+        name: "curso javascript nivel 1 - Jóvenes Programadores",
+        image: certificado17,
+    },
+    {
+        id: 18,
+        name: "curso javascript nivel 2 - Jóvenes Programadores",
+        image: certificado18,
+    },
+    {
+        id: 19,
+        name: "Curso PHP nivel 1 - Jóvenes Programadores",
+        image: certificado19,
+    },
+    {
+        id: 20,
+        name: "Curso CSS - Jóvenes Programadores",
+        image: certificado20,
+    },
+    {
+        id: 21,
+        name: "Curso Introducción a Python - Jóvenes Programadores",
+        image: certificado21,
+    },
+    {
+        id: 22,
+        name: "Curso de React - Jóvenes Programadores",
+        image: certificado22,
+    },
+];
+---
+
+<Section id="certificaciones">
+    <h2 class="w-full px-4 flex gap-x-4 mb-3 items-center text-3xl text-left">
+        <StudyIcon class="size-7" />
+        Certificaciones
+    </h2>
+    <table class="w-full">
+        <thead class="flex w-full">
+                <th class="border w-[88px] px-auto py-1">Id</th>
+                <th class="border w-[512px] px-auto py-1">Nombre Curso</th>
+                <th class="border w-44 px-auto py-1">Certificado</th>
+        </thead>
+
+        <tbody class=" w-full border flex flex-col">
+            {
+                cursos.map((curso) => {
+                    return (
+                            <tr class="w-full">
+                                <td class="border w-[85px] px-auto py-1 text-center">
+                                    {curso.id}
+                                </td>
+                                <td class="border w-[500px] px-auto py-1 text-center">
+                                    {curso.name}
+                                </td>
+                                <td class="border w-44 py-1">
+                                    <Image class="certificado" src={curso.image} alt={curso.name} />
+                                </td>
+                            </tr>
+                        );
+                    })
+                }
+        </tbody>
+    </table>
+</Section>
+
+<style>
+    td {
+        padding: 10px;
+    }
+    .certificado {
+        width: 80px;
+        margin: auto;
+    }
+</style>

@@ -3,7 +3,7 @@ import Section from "./Section.astro";
 import CodeIcon from "./icons/CodeIcon.astro";
 import SkillItem from "./SkillItem.astro";
 
-const skills = [
+const skills_programmer = [
   {
     name: "HTML",
     url: "./assets/html.png"
@@ -65,6 +65,21 @@ const skills = [
     url: "./assets/github.png"
   },
 ];
+
+const technical_skills = [
+  {
+    name: "HFC",
+    url: "./images/tap.webp"
+  },
+  {
+    name: "FTTH",
+    url: "./images/nap_vtr.webp"
+  },
+  {
+    name: "RED NEUTRA",
+    url: "./images/nap_onnet.webp"
+  }
+]
 ---
 
 <Section id="skills">
@@ -72,6 +87,7 @@ const skills = [
     <CodeIcon class="size-8" />
     Mis Skills son:
   </h2>
+  <h3 class="text-2xl font-semibold">Desarrollo web</h3>
   <article
     class="flex flex-col text-center text-gray-600 max-w-[700px] mx-auto mt-7"
   >
@@ -79,7 +95,7 @@ const skills = [
       class="font-bold grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-6 text-center mb-5"
     >
       {
-        skills.map((skill) => (
+        skills_programmer.map(skill => (
             <SkillItem name={skill.name} url={skill.url} />
         ))
       }
