@@ -1,7 +1,7 @@
 ---
-import Badge from "../components/Badge.astro";
 import Section from "../components/Section.astro";
 import SocialContainer from "../components/SocialContainer.astro";
+import Badge from "../components/Badge.astro";
 
 import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
 import GitHubIcon from "../components/icons/GitHubIcon.astro";
@@ -18,8 +18,8 @@ import EmailIcon from "../components/icons/EmailIcon.astro";
     />
   </picture>
 
-  <h1 class="w-full text-3xl font-bold flex justify-between text-[var(--title)]">
-    Hey, soy Juan Palma,
+  <div class="w-full text-3xl font-bold flex justify-between text-[var(--title)]">
+    <p>Hey, soy <span class="text-[#efe060]">Juan Palma</span></p>
     <a
       href="https://www.linkedin.com/in/juan-palma-alvarez/"
       target="_blank"
@@ -27,17 +27,16 @@ import EmailIcon from "../components/icons/EmailIcon.astro";
     >
       <Badge>Disponible para Trabajar</Badge>
     </a>
-  </h1>
-
-  <div class="flex text-justify md:text-left text-lg text-white">
-    Autodidacta con un fuerte deseo de poder aprender habilidades nuevas, soy
-    Desarrollador Frontend con +2 años de experiencia; Técnico en
-    Telecomunicaciones especializado en Instalaciones Docimiciliarias en HFC y
-    FTTH certificado en VTR; Técnico en Armado y Reparación de Computadoras, con
-    más de 10 años de experiencia, de Santiago de Chile.
   </div>
 
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+  <div class="flex flex-col text-justify md:text-left text-lg my-10 text-white">
+    <p>Soy <span class="text-[#efe060]">desarrollador Frontend</span> con más de dos años de experiencia, apasionado por el aprendizaje continuo y la adquisición de nuevas habilidades.
+    </p>
+    <p>
+      <span class="text-[#efe060]">Técnico en Telecomunicaciones</span>, especializado en instalaciones domiciliarias de HFC, FTTH y Red Neutra, actualmente me encuentro trabajando como Técnico especialista en Instalaciones domiciliarias en TechnoGroup, certificado por VTR. Además, cuento con más de 10 años de experiencia en el armado y reparación de computadoras. Resido en Peñaflor, Chile.</p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mb-10">
     <SocialContainer link="https://www.linkedin.com/in/juan-palma-alvarez/">
       <LinkedInIcon class="size-6" />
       LinkedIn
@@ -55,6 +54,13 @@ import EmailIcon from "../components/icons/EmailIcon.astro";
   </div>
 </Section>
 <style>
+  #about {
+    background-image: radial-gradient(
+			circle,
+			#050502 30%,
+			#efe060 50%
+		);
+  }
   .foto-mia {
     width: 125px;
     height: auto

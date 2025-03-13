@@ -15,7 +15,7 @@ import '@fontsource/ibm-plex-mono';
 		<meta name="description" content={description}>
 		<meta name="google-site-verification" content="VgvIFEHXcxoIB3m5ruc9a3p1oeUs6d8ICa8u2zZ2ARg" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/avatar.svg" />
 		<link rel="canonical" href="https://porfolio-blue.netlify.app/">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -26,8 +26,10 @@ import '@fontsource/ibm-plex-mono';
 </html>
 <style is:global>
 	:root {
-		--fondo: #080c29;
-		--fuente: #d0d0e9;
+		--bg-dark: #050502;
+		--font-dark: white;
+		--bg-light: #ddd;
+		--font-light: #000;
 		--title: #aaa;
 		--subtitle: #bbb;
 		--description: #ccc;
@@ -40,7 +42,7 @@ import '@fontsource/ibm-plex-mono';
 	body {
 		display: flex;
 		flex-direction: column;
-		background: var(--fondo);
-		color: var(--fuente);
+		background: var(--bg-dark);
+		color: var(--font-dark);
 	}
 </style>
