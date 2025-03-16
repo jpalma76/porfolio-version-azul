@@ -149,11 +149,11 @@ const cursos = [
         <StudyIcon class="size-7" />
         Certificaciones
     </h2>
-    <table class="w-full">
-        <thead class="flex w-full">
-                <th class="border w-[88px] px-auto py-1">Id</th>
-                <th class="border w-[512px] px-auto py-1">Nombre Curso</th>
-                <th class="border w-44 px-auto py-1">Certificado</th>
+    <table class="w-[800px]">
+        <thead class="flex w-[800px]">
+                <th class="border w-[90px] px-auto py-1">Id</th>
+                <th class="border w-[510px] px-auto py-1">Nombre Curso</th>
+                <th class="border w-[200px] px-auto py-1">Certificado</th>
         </thead>
 
         <tbody class=" w-full border flex flex-col">
@@ -161,13 +161,13 @@ const cursos = [
                 cursos.map((curso) => {
                     return (
                             <tr class="w-full">
-                                <td class="border w-[85px] px-auto py-1 text-center">
+                                <td class="border w-[90px] px-auto py-1 text-center">
                                     {curso.id}
                                 </td>
-                                <td class="border w-[500px] px-auto py-1 text-center">
+                                <td class="border w-[510px] px-auto py-1 text-center">
                                     {curso.name}
                                 </td>
-                                <td class="border w-44 py-1">
+                                <td class="border w-[200px] py-1">
                                     <Image class="certificado" src={curso.image} alt={curso.name} />
                                 </td>
                             </tr>
