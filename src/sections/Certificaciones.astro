@@ -143,17 +143,16 @@ const cursos = [
     },
 ];
 ---
-
 <Section id="certificaciones">
     <h2 class="w-full px-4 flex gap-x-4 mb-3 items-center text-3xl text-left">
         <StudyIcon class="size-7" />
         Certificaciones
     </h2>
     <table class="w-[900px]">
-        <thead class="flex w-[900px]">
-                <th class="border w-[100px] px-auto py-1">Id</th>
-                <th class="border w-[600px] px-auto py-1">Nombre Curso</th>
-                <th class="border w-[200px] px-auto py-1">Certificado</th>
+        <thead class="flex w-full">
+                <th class="id border w-[100px] px-auto py-1">Id</th>
+                <th class="name border w-[600px] px-auto py-1">Nombre Curso</th>
+                <th class="certificate border w-[200px] px-auto py-1">Certificado</th>
         </thead>
 
         <tbody class=" w-full border flex flex-col">
@@ -161,13 +160,13 @@ const cursos = [
                 cursos.map((curso) => {
                     return (
                             <tr class="w-full">
-                                <td class="border w-[100px] px-auto py-1 text-center">
+                                <td class="id border w-[100px] px-auto py-1 text-center">
                                     {curso.id}
                                 </td>
-                                <td class="border w-[600px] px-auto py-1 text-center">
+                                <td class="name border w-[600px] px-auto py-1 text-center">
                                     {curso.name}
                                 </td>
-                                <td class="border w-[200px] py-1">
+                                <td class="certificate border w-[200px] py-1">
                                     <Image class="certificado" src={curso.image} alt={curso.name} />
                                 </td>
                             </tr>
@@ -185,5 +184,20 @@ const cursos = [
     .certificado {
         width: 80px;
         margin: auto;
+    }
+    /* MOBILE */
+    @media(max-width: 400px) {
+        table {
+            width: 300px;
+        }
+        .id {
+            width: 50px;
+        }
+        .name {
+            width: 250px;
+        }
+        .certificate {
+            display: none;
+        }
     }
 </style>
