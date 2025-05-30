@@ -1,47 +1,49 @@
 ---
+import GitHub from '../components/icons/GitHub.astro';
+
 interface Props {
-    title: string;
-    date: string;
-    description: string;
-    link: string;
-    repo: string;
+    title: string
+    date: string
+    description: string
+    link: string
+    repo: string
+    src: any
 }
 
-const { title, date, description, link, repo } = Astro.props;
+const { title, date, description, link, repo, src } = Astro.props;
+
 ---
 
-<div class="w-full flex flex-col gap-y-4 items-start">
-    <div class="text-base">{date}</div>
+<div class="max-w-[500px] flex flex-col gap-y-4 items-start mx-2 py-4 px-3">
+    <h3
+        class="w-full h-20 flex items-center text-xl font-semibold text-yellow-200/70 uppercase"
+    >
+        {title}
+    </h3>
 
-    <h3 class="text-lg font-semibold text-yellow-200/70">{title}</h3>
+    <div class="text-xs font-bold mb-1">{date}</div>
+    
+    <div class="w-full flex justify-center mx-auto">
+        <a 
+            class="hover:scale-110 hover:opacity-60" 
+            href={link}
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+            <img class="w-[80%] mx-auto rounded-xl border-2" src={src} alt="imagen del proyecto">
+        </a>
+    </div>
 
-    <div class="opacity-70 text-base text-[var(--description)">
+    <div class="w-full opacity-70 text-sm text-[var(--description)">
         {description}
     </div>
-    {
-        link && (
-            <>
-                <div class="text-left text-base flex flex-col items-start gap-y-1 my-2">
-                    Links:
-                    <a
-                        class="hover:text-[var(--hover)] opacity-70"
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ver: {title}
-                    </a>
-                    <a
-                        class="hover:text-[var(--hover)] opacity-70"
-                        href={repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ir a: {repo}
-                    </a>
-                </div>
-                <div class="w-full text-write border-dotted text-sm border opacity-70 mb-5"></div>
-            </>
-        )
-    }
+
+    <a 
+        class="hover:scale-110 hover:opacity-60 w-auto h-12 flex items-end mb-0"
+        target="_blank"
+        rel="noopener no referrer"
+        href={repo}
+    >
+        <GitHub class="size-8 "/>
+    </a>
 </div>
