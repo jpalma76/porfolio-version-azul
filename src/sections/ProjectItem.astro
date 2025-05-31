@@ -25,16 +25,16 @@ const { title, date, description, link, repo, src } = Astro.props;
     
     <div class="w-full flex justify-center mx-auto">
         <a 
-            class="hover:scale-110 hover:opacity-60 w-[80%] h-auto" 
+            class="hover:scale-110 hover:opacity-60 w-full h-auto" 
             href={link}
             rel="noopener noreferrer"
             target="_blank"
         >
-            <img class="w-[80%] mx-auto rounded-xl border-2" src={src} alt="imagen del proyecto">
+            <img class="w-[90%] h-auto mx-auto my-2 rounded-xl border-2" src={src} alt="imagen del proyecto">
         </a>
     </div>
 
-    <div class="w-full opacity-70 text-sm text-[var(--description)">
+    <div class="w-full opacity-70 text-sm text-[var(--description) h-20">
         {description}
     </div>
 
@@ -44,6 +44,6 @@ const { title, date, description, link, repo, src } = Astro.props;
         rel="noopener no referrer"
         href={repo}
     >
-        <GitHub class="size-8 "/>
+        <GitHub class="inline size-10 hover:scale-125"/>
     </a>
 </div>
