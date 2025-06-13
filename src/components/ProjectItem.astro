@@ -1,0 +1,47 @@
+---
+interface Props {
+    title: string;
+    date: string;
+    description: string;
+    link: string;
+    repo: string;
+}
+
+const { title, date, description, link, repo } = Astro.props;
+---
+
+<div class="w-full flex flex-col gap-y-4 items-start">
+    <div class="text-base">{date}</div>
+
+    <h3 class="text-lg font-semibold text-yellow-200/70">{title}</h3>
+
+    <div class="opacity-70 text-base text-[var(--description)">
+        {description}
+    </div>
+    {
+        link && (
+            <>
+                <div class="text-left text-base flex flex-col items-start gap-y-1 my-2">
+                    Links:
+                    <a
+                        class="hover:text-[var(--hover)] opacity-70"
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ver: {title}
+                    </a>
+                    <a
+                        class="hover:text-[var(--hover)] opacity-70"
+                        href={repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ir a: {repo}
+                    </a>
+                </div>
+                <div class="w-full text-write border-dotted text-sm border opacity-70 mb-5"></div>
+            </>
+        )
+    }
+</div>

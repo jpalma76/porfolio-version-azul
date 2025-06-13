@@ -1,0 +1,44 @@
+---
+import Section from "../components/Section.astro";
+import ExpericenceItem from "./ExpericenceItem.astro";
+import BriefCase from '../components/icons/BriefCase.astro';
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente",
+    title: "Realización de cursos y proyectos sacados de Youtube",
+    description:
+      "Realización de proyectos en Astro y React de Youtube para aprender nuevas tecnologías, técnicas y herramientas de programación ",
+  },
+  {
+    date: "2023",
+    title: "Realización varios cursos de programación",
+    description:
+      "Realización de forma exitosa de varios cursos de programación web en la plataforma Platzi y en el programa Jóvenes Programadores de Biblioredes",
+  },
+  {
+    date: "2022",
+    title: "Realización de varios cursos de Programación en Platzi y proyectos de Youtube.",
+    description:
+      "Realización de varios cursos de Programación en Platzi y proyectos de Youtube en lenguajes como html, css, javascript, php, c#, React, los que serán detallados en la sección Cursos.",
+  }
+];
+---
+
+<Section id="experience">
+    <h2 class="w-full flex items-center flex-row gap-x-2  text-3xl ">
+        <BriefCase class="size-7" />
+        Experiencia
+    </h2>
+
+    <ol class="relative border-s border-gray-400 dark:border-gray-700">
+        {
+            EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExpericenceItem { ...experience } />
+            </li>
+        ))
+        }
+        
+    </ol>
+</Section>

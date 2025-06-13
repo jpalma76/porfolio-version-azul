@@ -1,0 +1,46 @@
+---
+import Section from '../components/Section.astro';
+import EmailIcon from './icons/EmailIcon.astro';
+import GmailIcon from './rrss/GmailIcon.astro';
+import LinkedInIcon from './rrss/LinkedInIcon.astro';
+import XIcon from './rrss/XIcon.astro';
+import BriefCase from './icons/BriefCase.astro';
+import SocialContainerContact from './SocialContainerCotact.astro';
+
+---
+
+<Section id="contact">
+    <h2 class="w-full flex items-center gap-x-3 text-3xl text-left">
+        <EmailIcon class="size-7" />
+        Contacto:
+    </h2>
+
+    <div class="w-full mt-10 mb-3">
+        Si deseas contactarme puedes hacerlo a través de los  siguientes links. 
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 py-10">
+
+        <SocialContainerContact link="https://www.linkedin.com/in/juan-palma-alvarez/">
+            <LinkedInIcon class="size-5" />
+            LinkedIn
+        </SocialContainerContact>
+        
+        <SocialContainerContact link="mailto:juan.palma.alvarez@gmail.com">
+            <GmailIcon class="size-5" />
+            Gmail
+        </SocialContainerContact>
+
+        <SocialContainerContact link="https://x.com/JPALMA76">
+            <XIcon class="size-5" />
+            jpalma76
+        </SocialContainerContact>
+
+        <SocialContainerContact link="https://mega.nz/file/W4NDFIhY#NUVq_a9_ijfnoHccLBjpfpRcLQDSy91IHctDllywOPQ">
+            <BriefCase class="size-5"/>
+            Currículum
+        </SocialContainerContact>
+       
+    </div>
+
+</Section>

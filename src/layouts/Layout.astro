@@ -1,0 +1,48 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+import '@fontsource/ibm-plex-mono';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description}>
+		<meta name="google-site-verification" content="VgvIFEHXcxoIB3m5ruc9a3p1oeUs6d8ICa8u2zZ2ARg" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/avatar.svg" />
+		<link rel="canonical" href="https://porfolio-blue.netlify.app/">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--bg-dark: #050502;
+		--font-dark: white;
+		--bg-light: #ddd;
+		--font-light: #000;
+		--title: #aaa;
+		--subtitle: #bbb;
+		--description: #ccc;
+		--hover: #f1d34e;
+	}
+
+	html {
+		font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace, system-ui, sans-serif;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		background: var(--bg-dark);
+		color: var(--font-dark);
+	}
+</style>

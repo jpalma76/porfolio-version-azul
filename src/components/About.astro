@@ -1,0 +1,65 @@
+---
+import Badge from "../components/Badge.astro";
+import Section from "../components/Section.astro";
+import SocialContainer from "../components/SocialContainer.astro";
+
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import EmailIcon from "../components/icons/EmailIcon.astro";
+---
+
+<Section id="about">
+  <picture class="w-full flex justify-normal mb-5">
+    <img
+      class="foto-mia rounded-full opacity-80 aspect-square"
+      src="./images/foto-mia.webp"
+      alt="Foto mía"
+
+    />
+  </picture>
+
+  <div class="w-full text-3xl font-bold flex justify-between text-[var(--title)]">
+    <p>Hey, soy <span class="text-[#efe060]">Juan Palma</span></p>
+    <a
+      href="https://www.linkedin.com/in/juan-palma-alvarez/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Badge>Disponible para Trabajar</Badge>
+    </a>
+  </div>
+
+  <div class="flex text-justify md:text-left text-lg my-10 text-white">
+    <p>Soy <span class="text-[#efe060]">desarrollador Frontend</span> con más de dos años de experiencia, apasionado por el aprendizaje continuo y la adquisición de nuevas habilidades. <span class="text-[#efe060]">Técnico en Telecomunicaciones</span>, especializado en instalaciones domiciliarias de HFC, FTTH y Red Neutra, actualmente me encuentro trabajando como Técnico especialista en Instalaciones domiciliarias en TechnoGroup, certificado por VTR. Además, cuento con más de 10 años de experiencia en el armado y reparación de computadoras. Resido en Peñaflor, Chile.</p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mb-10">
+    <SocialContainer link="https://www.linkedin.com/in/juan-palma-alvarez/">
+      <LinkedInIcon class="size-6" />
+      LinkedIn
+    </SocialContainer>
+
+    <SocialContainer link="https://github.com/jpalma76">
+      <GitHubIcon class="size-6" />
+      GitHub
+    </SocialContainer>
+
+    <SocialContainer link="mailto:juan.palma.alvarez@gmail.com">
+      <EmailIcon class="size-6" />
+      Email
+    </SocialContainer>
+  </div>
+</Section>
+<style>
+  #about {
+    background-image: radial-gradient(
+			circle,
+			#050502 30%,
+			#efe060 50%
+		);
+  }
+  .foto-mia {
+    width: 125px;
+    height: auto
+  }
+</style>

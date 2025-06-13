@@ -1,0 +1,71 @@
+---
+import Section from "../components/Section.astro";
+import ProjectIcon from "./ProjectIcon.astro";
+import ProjectItem from "./ProjectItem.astro";
+const PROJECTS = [
+    {
+        title: "Landing page de la JSConf2024 (NO OFICIAL)",
+        date: "Realizado en Octubre, 2024",
+        description:
+            "Confección de la landing de la JSConf no oficial, realizado con Astro, Tailwind y CSS nativo.",
+        link: "https://landing-js-conf2024.netlify.app/",
+        repo: "https://github.com/jpalma76/landing-js-conf2024",
+    },
+    {
+        title: "Landing page de la Velada IV",
+        date: "Realizado en Abril, 2024",
+        description:
+            "Confección de la landing de la Velada IV copiada de @Midudev, realizado con Astro, Tailwind y CSS nativo.",
+        link: "https://copia-de-pre-landing-de-la-velada-iv.netlify.app/",
+        repo: "https://github.com/jpalma76/copia-de-la-velada-landing",
+    },
+    {
+        title: "Porfolio minimalista configurado desde un Json para imprimir",
+        date: "Realizado en marzo, 2024",
+        description:
+            "Versión de porfolio minimalista configurable con un json y con la posibilidad de imprimir, hecho con Astro y CSS nativo.",
+        link: "https://minimalist-portfolio-with-astro.netlify.app/",
+        repo: "https://github.com/jpalma76/minimalist-portfolio-with-json",
+    },
+    {
+        title: "Porfolio-dev",
+        date: "realizado en Enero, 2024",
+        description: "Porfolio Dev realizado con Astro, Tailwind y Flowbite.",
+        link: "https://copia-de-portfolio-dev.netlify.app/",
+        repo: "https://github.com/jpalma76/porfolio-dev",
+    },
+    {
+        title: "Portafolio Web con HTML, Css Nativo, JavaScript ",
+        date: "Realizado en Julio, 2022",
+        description:
+            "Primer porfolio realizado con HTML, CSS nativo, harcodeando los certificados uno por uno, posteriormente se le agregó javascript y se renderizaron dinámicamente los cursos, JQuery y Bootstrap para mejorar la responsividad.",
+        link: "https://portafolio-juan-palma.netlify.app/",
+        repo: "https://github.com/jpalma76/portafolio",
+    },
+    {
+        title: "Portafolio 3",
+        date: "Realizado en Febrero de 2024",
+        description:
+            "Ejercicio de Portafolio creado con html, css, javascript, jquery, bootstrap",
+        link: "https://portafolio-tres.netlify.app/",
+        repo: "https://github.com/jpalma76/Portafolio3",
+    },
+];
+---
+
+<Section id="projects">
+    <h2 class="w-full px-4 flex gap-x-4 mb-3 items-center text-3xl text-left">
+        <ProjectIcon class="size-7" />
+        Proyectos
+    </h2>
+
+    <ul class="w-full flex flex-col my-2">
+        {
+            PROJECTS.map((project) => (
+                <li class="relative mb-6 sm:mb-0">
+                    <ProjectItem {...project} />
+                </li>
+            ))
+        }
+    </ul>
+</Section>
