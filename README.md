@@ -1,7 +1,12 @@
+## Proyecto Porfolio Dev hecho con AstroJS, TailwindCSS, Frowbite y CSS
+![image](https://github.com/user-attachments/assets/b3abc0ef-2238-4eb0-af84-f9a10d4a5ca2)
+
+![image](https://github.com/user-attachments/assets/015128a7-74dd-4cd6-8700-d5f24c6a300a)
+
 Este es un ejercicio de creación de un porfolio en Astro, Tailwind y Flowbite para practicar la componetización, uso de svg y uso de TypeScript.
 Si deseas descargar el proyecto y modificarlo sin duda puedes hacerlo, no existe ninguna restricción por motivo de licencias.
 
-para descargar el proyecto puedes hacerlo con el administrador de paquetes de tu preferencia, yo uso pnpm porque creo que es más rápido que npm y porque el proyecto original lo usaron. Este es una copia del porfolio dev de @midudev, si quieres aprender como se hizo puedes hacerlo en este link:
+para descargar el proyecto puedes hacerlo con el administrador de paquetes de tu preferencia, yo uso pnpm porque creo que es más rápido que npm y porque el proyecto original lo usaron. Este porfolio está inspirado en un porfolio dev de @midudev, si quieres aprender como se hizo puedes hacerlo en este link:
 
 https://www.youtube.com/watch?v=HEMvsJTBweY&t=2269s
 
