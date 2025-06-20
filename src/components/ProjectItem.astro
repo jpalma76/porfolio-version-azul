@@ -5,43 +5,34 @@ interface Props {
     description: string;
     link: string;
     repo: string;
+    url: string;
 }
 
-const { title, date, description, link, repo } = Astro.props;
+const { title, date, description, link, repo, url } = Astro.props;
 ---
 
-<div class="w-full flex flex-col gap-y-4 items-start">
-    <div class="text-base">{date}</div>
+<div class="card w-[255px] h-[330px] flex flex-col items-center border rounded-md px-5 py-3 transition-all gap-5">
+    <h3 class="mx-auto h-16 flex items-center text-center text-yellow-300/90">{title}</h3>
+    <a 
+        href={link}
+        target="_blank"
+        class="w-full hover:scale-125 hover:opacity-40"
+    >
 
-    <h3 class="text-lg font-semibold text-yellow-200/70">{title}</h3>
-
-    <div class="opacity-70 text-base text-[var(--description)">
-        {description}
-    </div>
-    {
-        link && (
-            <>
-                <div class="text-left text-base flex flex-col items-start gap-y-1 my-2">
-                    Links:
-                    <a
-                        class="hover:text-[var(--hover)] opacity-70"
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ver: {title}
-                    </a>
-                    <a
-                        class="hover:text-[var(--hover)] opacity-70"
-                        href={repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ir a: {repo}
-                    </a>
-                </div>
-                <div class="w-full text-write border-dotted text-sm border opacity-70 mb-5"></div>
-            </>
-        )
-    }
+        <div class="w-full flex flex-col justify-center gap-y-5 text-center">
+            <img class="w-[80%] h-auto border rounded-md mx-auto" src={url} alt={title}>
+        </div>
+    </a>
+    <span class="text-sm">{description}</span>
 </div>
+
+<style>
+    @media (max-width:600px) {
+        .card {
+            width:350px;
+            height: auto;
+            margin: 0 auto;
+            transition: .3s;
+        }
+    }
+</style>
