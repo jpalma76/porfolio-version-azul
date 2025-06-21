@@ -19,11 +19,11 @@ const { title, date, description, link, repo, url } = Astro.props;
         class="w-full hover:scale-125 hover:opacity-40"
     >
 
-        <div class="w-full flex flex-col justify-center gap-y-5 text-center">
+        <div class="w-full h-[100px] flex flex-col justify-center gap-y-5 text-center">
             <img class="w-[80%] h-auto border rounded-md mx-auto" src={url} alt={title}>
         </div>
     </a>
-    <span class="text-sm">{description}</span>
+    <span class="text-sm text-center">{description}</span>
 </div>
 
 <style>
